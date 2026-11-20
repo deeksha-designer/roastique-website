@@ -123,3 +123,14 @@ h1,h2,h3,.section h2,.menu-title h2,.app-caption h2,.visit h2,.footer h2{font-fa
 .app-backdrop{animation:app-words 22s linear infinite!important}.app-left{isolation:isolate}.phone{z-index:1}
 @media(max-width:600px){.heading-inline{font-size:clamp(38px,10vw,54px)!important}.trusted .heading-inline{font-size:clamp(34px,8.2vw,48px)!important}}
 @media(prefers-reduced-motion:reduce){.app-backdrop{animation:none!important}}
+.section{max-width:var(--max);margin:auto;padding:clamp(90px,11vw,120px) var(--pad)}
+.events.section{max-width:none;padding:clamp(90px,11vw,120px) 0 0}.events>h2{padding-inline:120px}
+.trusted.section{max-width:none;background:#e4edf3}
+.cafe-film:after{inset:0;background:linear-gradient(to bottom,rgba(71,52,53,0) 0%,rgba(71,52,53,1) 100%)!important}
+.mood-panel,.sommelier .mood-panel{display:grid;grid-template-columns:300px minmax(0,1fr);gap:0;padding:0;overflow:hidden;border:0}
+.moods{margin:0;padding:0 40px;flex-direction:column;justify-content:center;align-items:stretch;background:#e4edf3}.moods button{border-radius:0;border:0;border-bottom:1px solid rgba(71,52,53,.2);padding:32px 10px;text-align:left;background:transparent}
+@media(max-width:1100px){.events>h2{padding-inline:48px}}
+@media(max-width:900px){.mood-panel,.sommelier .mood-panel{grid-template-columns:1fr}.moods{flex-direction:row;flex-wrap:wrap;padding:16px}.moods button{padding:16px 20px}}
+@media(max-width:600px){.section{padding:80px 20px}.events.section{padding-top:80px}.events>h2{padding-inline:20px}.moods{padding:12px}.moods button{padding:14px 10px;font-size:14px}}
+.menu-button .menu-cdn-icon{display:block;width:auto;height:auto;background:none;font-size:21px;grid-column:2;grid-row:1/3;align-self:center}
+@media(max-width:600px){.menu-button .menu-cdn-icon{grid-column:1}}
