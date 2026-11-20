@@ -1,0 +1,142 @@
+:root { --font-display: "EB Garamond", Georgia, serif; --cta-height: 3.5rem; }
+body { overflow-x: clip; }
+.section-heading > p:first-child,
+.provenance-copy > p:first-child,
+.bakery-card > p:first-child,
+.app-copy > p:first-child,
+.sommelier-grid > div > p:first-child,
+.event-intro > p:first-child,
+.guest-overlay > p:first-child,
+.trusted-heading p:first-child,
+.visit-card > p:first-child { margin: 0 0 1.25rem; font-size: .875rem; font-weight: 600; text-transform: uppercase; }
+.button { min-height: var(--cta-height); padding: .9rem 1.45rem; border-radius: 0; gap: 1rem; }
+.button-primary { background: var(--color-ink); color: var(--color-paper); }
+.button-primary:hover { background: var(--color-paper); color: var(--color-ink); }
+.button-dark, .button-light { min-height: var(--cta-height); border-radius: 0; }
+
+.nav-trigger { border: 0; background: transparent; padding: 0; color: inherit; font-size: .875rem; }
+.mega-menu { position: fixed; z-index: -1; top: var(--header-height); left: var(--gutter); right: var(--gutter); display: grid; grid-template-columns: 1fr 1.15fr .8fr; gap: 4rem; background: var(--color-paper); color: var(--color-ink); padding: 3rem; opacity: 0; transform: translateY(-1rem); pointer-events: none; transition: opacity 180ms ease-out, transform 180ms ease-out; }
+.mega-menu.is-open { z-index: var(--z-header); opacity: 1; transform: translateY(0); pointer-events: auto; }
+.mega-menu__intro span { font-size: .8rem; text-transform: uppercase; }
+.mega-menu__intro p { max-width: 27ch; margin-top: 1.5rem; font-family: var(--font-display); font-size: 2rem; line-height: 1.05; }
+.mega-menu__links { display: flex; flex-direction: column; }
+.mega-menu__links a { padding-block: .7rem; font-family: var(--font-display); font-size: 2.1rem; border-bottom: 1px solid rgba(71,52,53,.2); }
+.mega-menu figure { margin: 0; }
+.mega-menu figure img { aspect-ratio: 4/3; }
+
+.hero { min-height: 100dvh; }
+.hero-content { padding-bottom: clamp(2rem,4vw,3rem); }
+.hero h1 { max-width: 11ch; }
+.coffee-smoke { position: absolute; z-index: 2; inset: 8% 35% auto auto; width: 26rem; height: 34rem; opacity: .45; filter: blur(18px); pointer-events: none; }
+.coffee-smoke i { position: absolute; bottom: 0; left: 45%; width: 5rem; height: 23rem; border: 1.5rem solid rgba(240,229,202,.4); border-color: rgba(240,229,202,.38) transparent transparent rgba(240,229,202,.18); border-radius: 50%; animation: smoke-rise 7s ease-in-out infinite; }
+.coffee-smoke i:nth-child(2) { left: 22%; height: 18rem; animation-delay: -2s; transform: scale(.7) rotate(25deg); }
+.coffee-smoke i:nth-child(3) { left: 65%; height: 20rem; animation-delay: -4s; transform: scale(.8) rotate(-18deg); }
+@keyframes smoke-rise { 0%,100% { opacity: .15; transform: translate3d(0,4rem,0) scale(.75) rotate(0); } 45% { opacity: .65; } 70% { transform: translate3d(2rem,-2rem,0) scale(1.08) rotate(18deg); } }
+
+.menu-reel { display: grid; grid-template-columns: 1.2fr .72fr .72fr; gap: .5rem; align-items: stretch; overflow: hidden; }
+.menu-reel figure { margin: 0; min-height: 36rem; }
+.menu-reel figure img { height: 100%; object-fit: cover; }
+.menu-reel .experience-notes { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; padding-top: 2rem; }
+
+.menu-edit { padding-bottom: 0; }
+.menu-scroll-scene { display: grid; grid-template-columns: 1.25fr .75fr; min-height: 260dvh; gap: 0; margin-inline: calc(-1 * var(--gutter)); }
+.menu-visual-stack { position: sticky; top: 0; height: 100dvh; overflow: hidden; background: var(--color-ink); }
+.menu-visual { position: absolute; inset: 0; margin: 0; opacity: 0; transform: scale(1.08); transition: opacity 700ms ease-out, transform 900ms ease-out; }
+.menu-visual.is-active { opacity: 1; transform: scale(1); }
+.menu-visual img { height: 100%; object-fit: cover; filter: brightness(.72); }
+.menu-stage-title { position: absolute; inset: auto 3rem 3rem; z-index: 2; color: white; display: flex; align-items: end; justify-content: space-between; }
+.menu-stage-title strong { font-family: var(--font-display); font-size: clamp(3.5rem,6vw,7rem); font-weight: 400; line-height: .86; }
+.menu-stage-title span { font-size: .8rem; text-transform: uppercase; }
+.menu-scroll-scene .menu-list { padding: 18dvh clamp(2rem,4vw,5rem); background: var(--color-paper-deep); }
+.menu-scroll-scene .menu-list article { min-height: 62dvh; display: flex; flex-direction: column; justify-content: center; border: 0; opacity: .45; transition: opacity 180ms ease-out; }
+.menu-scroll-scene .menu-list article.is-active { opacity: 1; }
+.menu-scroll-scene .menu-list h3 { font-size: clamp(2.4rem,4vw,5rem); }
+
+.provenance-grid { align-items: start; }
+.provenance-copy { position: sticky; top: 8rem; padding-top: 4rem; }
+.origin-collage { position: relative; min-height: 58rem; }
+.origin-collage .origin-photo { margin: 0; width: 92%; }
+.origin-collage .origin-photo img { aspect-ratio: 4/5; }
+.origin-collage > figure:last-child { position: absolute; right: -3rem; bottom: 4rem; width: 48%; margin: 0; }
+.origin-collage > figure:last-child img { aspect-ratio: 4/5; }
+
+.bakery { overflow: hidden; }
+.bakery-photo img { filter: brightness(.56); }
+.bakery-card { border-top: 8px solid var(--color-paper-deep); }
+.bakery-marquee { position: absolute; z-index: 3; left: 0; right: 0; top: 46%; display: flex; white-space: nowrap; color: var(--color-paper); font-family: var(--font-display); font-size: clamp(3rem,6vw,7rem); pointer-events: none; animation: marquee 18s linear infinite; }
+.bakery-marquee span { flex: 0 0 auto; padding-right: 2rem; }
+.bakery-pattern { position: absolute; z-index: 4; bottom: 0; left: 0; right: 0; height: 1.35rem; background: repeating-conic-gradient(var(--color-ink) 0 25%, var(--color-paper) 0 50%) 0/1.35rem 1.35rem; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+.moment-strip { grid-template-columns: repeat(3,minmax(20rem,1fr)); overflow-x: auto; padding-bottom: 1rem; scroll-snap-type: x mandatory; }
+.moment-strip article { scroll-snap-align: start; border-radius: 10rem 10rem 0 0; }
+
+.app-section { position: relative; overflow: hidden; }
+.app-section::before { content: "ORDER · QUEUE · PASSPORT · ROASTIES · "; position: absolute; left: -4%; top: 12%; width: 56%; font-family: var(--font-display); font-size: clamp(4rem,7vw,8rem); line-height: .82; color: rgba(71,52,53,.1); }
+.phone-shell { position: relative; z-index: 2; transform: rotate(-3deg); box-shadow: 1.5rem 1.5rem 0 var(--color-ink); }
+.app-copy { position: relative; z-index: 2; }
+
+.event-mosaic { grid-template-columns: 1fr 1fr; gap: 1rem; }
+.event-intro { grid-row: span 2; display: flex; flex-direction: column; justify-content: center; padding: clamp(2rem,5vw,6rem); background: var(--color-ink); color: var(--color-paper); }
+.event-intro .body-copy { color: var(--color-soft); margin-block: 1.5rem 2rem; }
+.event-intro .button { align-self: flex-start; background: var(--color-paper-deep); color: var(--color-ink); }
+.event-card { position: relative; min-height: 28rem; overflow: hidden; }
+.event-card img { position: absolute; inset: 0; height: 100%; transition: transform 180ms ease-out; }
+.event-card:hover img { transform: scale(1.025); }
+.event-card::after { content: ""; position: absolute; inset: 50% 0 0; background: linear-gradient(transparent, rgba(71,52,53,.88)); }
+.event-card > div { position: absolute; z-index: 2; inset: auto 2rem 2rem; color: white; }
+.event-card h3 { font-size: clamp(2rem,3vw,3.5rem); }
+.event-card--large { min-height: 38rem; }
+
+.guest-proof { min-height: 110dvh; }
+.guest-overlay { min-height: 110dvh; padding-top: var(--section-space); justify-content: flex-start; }
+.testimonial-stack { position: relative; width: min(48rem,100%); margin: auto 8vw 0 auto; min-height: 25rem; }
+.testimonial-card { position: absolute; inset: 0; background: var(--color-paper); color: var(--color-ink); padding: clamp(2rem,4vw,4rem); opacity: .22; transform: translateY(5rem) scale(.88); transition: opacity 600ms ease-out, transform 600ms ease-out; }
+.testimonial-card.is-active { opacity: 1; transform: translateY(0) scale(1); }
+.testimonial-card blockquote { margin: 2rem 0; font-family: var(--font-display); font-size: clamp(1.8rem,3vw,3.2rem); line-height: 1.12; }
+.testimonial-card > p { color: var(--color-muted); }
+
+.logo-marquee { overflow: hidden; border-block: 1px solid rgba(71,52,53,.3); }
+.logo-track { display: flex; width: max-content; animation: logo-scroll 24s linear infinite; }
+.logo-track .trust-slot { width: 18rem; border-right: 1px solid rgba(71,52,53,.3); }
+@keyframes logo-scroll { to { transform: translateX(-36%); } }
+
+.footer { min-height: auto; }
+.footer-content { min-height: 100dvh; }
+.footer::after { content: "ROASTIQUE"; position: absolute; }
+
+@media (max-width:900px) {
+  .mega-menu { display: none; }
+  .coffee-smoke { right: -5rem; transform: scale(.75); }
+  .menu-reel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; }
+  .menu-reel figure { min-width: 78vw; min-height: 32rem; scroll-snap-align: start; }
+  .menu-reel .experience-notes { min-width: 100%; display: block; padding: 1rem; }
+  .menu-scroll-scene { grid-template-columns: 1fr; min-height: auto; margin-inline: 0; }
+  .menu-visual-stack { position: relative; height: 72dvh; }
+  .menu-scroll-scene .menu-list { padding: 3rem 0 0; }
+  .menu-scroll-scene .menu-list article { min-height: auto; opacity: 1; padding-block: 2rem; }
+  .origin-collage { min-height: 44rem; }
+  .provenance-copy { position: static; }
+  .event-mosaic { grid-template-columns: 1fr; }
+  .event-intro { min-height: 34rem; }
+  .testimonial-stack { margin: auto 0 0; }
+}
+@media (max-width:600px) {
+  .hero h1 { max-width: 9ch; }
+  .coffee-smoke { width: 19rem; height: 25rem; right: -7rem; top: 18%; }
+  .menu-stage-title { inset: auto 1.25rem 1.25rem; display: block; }
+  .menu-stage-title strong { font-size: 3.4rem; }
+  .menu-stage-title span { display: block; margin-top: .5rem; }
+  .origin-collage > figure:last-child { right: -1rem; }
+  .bakery-marquee { top: 38%; }
+  .moment-strip { grid-template-columns: repeat(3,82vw); margin-right: calc(-1 * var(--gutter)); }
+  .moment-strip article { min-height: 64dvh; }
+  .phone-shell { transform: none; box-shadow: .75rem .75rem 0 var(--color-ink); }
+  .event-card { min-height: 24rem; }
+  .testimonial-stack { min-height: 30rem; }
+  .trusted-heading { display: block; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .coffee-smoke i, .bakery-marquee, .logo-track { animation: none; }
+  .menu-visual, .testimonial-card { transition: none; }
+}
