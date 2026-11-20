@@ -119,3 +119,7 @@ h1,h2,h3,.section h2,.menu-title h2,.app-caption h2,.visit h2,.footer h2{font-fa
 @media(max-width:600px){.mega-copy>a{padding-bottom:18px;font-size:28px}.visit{height:460px}}
 .heading-line{display:block;white-space:nowrap}.heading-line:is(em){font-style:italic;font-weight:400}.section h2,.menu-title h2,.prov-copy h2,.som-copy h2,.events h2,.visit h2,.footer-intro h2{text-align:left}
 @media(max-width:600px){.experience h2{font-size:clamp(32px,8.2vw,46px)}.footer-intro h2{font-size:clamp(34px,8.5vw,52px)}.trusted h2{font-size:clamp(39px,10vw,52px)}}
+.heading-inline .heading-line{display:inline;white-space:normal}.heading-inline em{white-space:nowrap}.experience-grid a:after{background:linear-gradient(to top,rgba(71,52,53,1) 0%,rgba(71,52,53,0) 100%)!important;inset:0}.experience-grid span{z-index:2}
+.app-backdrop{animation:app-words 22s linear infinite!important}.app-left{isolation:isolate}.phone{z-index:1}
+@media(max-width:600px){.heading-inline{font-size:clamp(38px,10vw,54px)!important}.trusted .heading-inline{font-size:clamp(34px,8.2vw,48px)!important}}
+@media(prefers-reduced-motion:reduce){.app-backdrop{animation:none!important}}
