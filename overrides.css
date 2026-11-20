@@ -142,3 +142,9 @@ h1,h2,h3,.section h2,.menu-title h2,.app-caption h2,.visit h2,.footer h2{font-fa
 @media(max-width:1100px){.site-header{grid-template-columns:minmax(0,1fr) auto;padding-inline:48px}.site-header .brand{min-width:0}.head-actions{gap:14px}.footer .footer-word{width:calc(100% + 96px);margin-left:-48px;font-size:15vw!important}}
 @media(max-width:900px){.site-header{height:80px;grid-template-columns:minmax(0,1fr) auto;padding-inline:32px}.site-header .brand span{font-size:17px}.site-header .brand img{width:28px;height:42px}.head-actions{gap:12px}.menu-button{width:96px;height:46px}.footer .footer-word{width:calc(100% + 96px);margin-left:-48px;font-size:15vw!important}}
 @media(max-width:600px){.site-header{height:72px;padding-inline:20px}.site-header .brand{gap:7px}.site-header .brand span{font-size:15px}.site-header .brand img{width:24px;height:36px}.head-actions{gap:8px}.menu-button{width:48px;height:44px;padding:0}.footer .footer-word{width:calc(100% + 40px);margin-left:-20px;font-size:15vw!important;line-height:.8}.footer{padding-inline:20px}.footer-legal{gap:8px}}
+/* Visit frame, hero video, and coffee story contrast. */
+.menu-button i:last-of-type{align-self:center}
+.menu-scene:after{background:linear-gradient(to bottom,rgba(71,52,53,0) 0%,rgba(71,52,53,.94) 100%)!important}
+.visit{border-radius:28px;overflow:hidden}
+.visit>div{left:50%;top:50%;transform:translate(-50%,-50%);border-radius:18px}
+@media(max-width:600px){.visit>div{left:50%;right:auto;max-width:calc(100% - 40px);width:calc(100% - 40px)}}
