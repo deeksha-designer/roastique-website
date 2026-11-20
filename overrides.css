@@ -111,3 +111,9 @@ h1,h2,h3,.section h2,.menu-title h2,.app-caption h2,.visit h2,.footer h2{font-fa
 .provenance-note{display:block;margin:-22px 0 28px;color:var(--muted);font:13px/1.4 var(--sans)}
 @media(max-width:900px){.pairing,.pairing img{height:440px;min-height:440px}.footer .footer-word{font-size:12.7vw!important}}
 @media(max-width:600px){.pairing{height:auto;min-height:0}.pairing img{height:300px;min-height:0}.app-backdrop span{width:330px}.guest-grid img,.guest-grid article:first-child img{height:250px}.footer .footer-word{font-size:12.4vw!important}}
+/* Requested copy cleanup and visit crop. */
+.mega-copy>a{padding-bottom:28px;font-size:32px;line-height:1.15}
+.moments>p,.guest-heading>p,.trusted>p,.trusted-mark{display:none}
+.visit{height:560px;min-height:0}.visit>img{height:100%;object-fit:cover;object-position:center 55%}
+@media(max-width:900px){.visit{height:500px}}
+@media(max-width:600px){.mega-copy>a{padding-bottom:18px;font-size:28px}.visit{height:460px}}
