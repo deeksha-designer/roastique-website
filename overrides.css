@@ -132,5 +132,8 @@ h1,h2,h3,.section h2,.menu-title h2,.app-caption h2,.visit h2,.footer h2{font-fa
 @media(max-width:1100px){.events>h2{padding-inline:48px}}
 @media(max-width:900px){.mood-panel,.sommelier .mood-panel{grid-template-columns:1fr}.moods{flex-direction:row;flex-wrap:wrap;padding:16px}.moods button{padding:16px 20px}}
 @media(max-width:600px){.section{padding:80px 20px}.events.section{padding-top:80px}.events>h2{padding-inline:20px}.moods{padding:12px}.moods button{padding:14px 10px;font-size:14px}}
+.visit{height:600px;min-height:0;padding-top:80px}
+.visit>div{border-radius:18px;position:absolute;left:var(--pad);top:50%;transform:translateY(-50%);padding:50px;background:rgba(255,253,248,.94);max-width:520px}
+@media(max-width:600px){.visit{height:460px;padding-top:56px}.visit>div{padding:28px;max-width:calc(100% - 40px)}}
 .menu-button .menu-cdn-icon{display:block;width:auto;height:auto;background:none;font-size:21px;grid-column:2;grid-row:1/3;align-self:center}
 @media(max-width:600px){.menu-button .menu-cdn-icon{grid-column:1}}
